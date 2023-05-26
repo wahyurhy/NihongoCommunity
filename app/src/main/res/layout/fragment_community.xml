@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CommunityFragment">
+
+    <FrameLayout
+        android:id="@+id/frame_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_search"
+                android:elevation="4dp"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:paddingStart="-5dp"
+                android:paddingEnd="50dp"
+                android:singleLine="true"
+                android:textColorHint="@color/black_text"
+                android:textSize="16sp"
+                app:closeIcon="@drawable/ic_close"
+                app:iconifiedByDefault="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:queryHint="@string/cari_diskusi_disini"
+                app:searchIcon="@drawable/ic_search"
+                tools:ignore="Autofill" />
+
+            <ImageButton
+                android:id="@+id/ib_filter"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/btn_rounded_search"
+                android:contentDescription="@string/you_can_filter_what_topic_do_you_want_here"
+                android:src="@drawable/ic_filter"
+                android:translationZ="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/search_bar"
+                app:layout_constraintEnd_toEndOf="@+id/search_bar"
+                app:layout_constraintTop_toTopOf="@+id/search_bar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
