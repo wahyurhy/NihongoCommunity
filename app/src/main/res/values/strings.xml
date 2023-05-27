@@ -11,4 +11,8 @@
     <string name="theme">Theme</string>
     <string name="description">Description</string>
     <string name="post">Post</string>
+    <string name="posted_by">Posted By</string>
+    <string name="comments">Comments</string>
+    <string name="add_comment_here">Add comment here...</string>
+    <string name="you_can_add_some_image_here">You can add some image here!</string>
 </resources>

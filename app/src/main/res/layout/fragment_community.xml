@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -25,7 +25,6 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:textColor="@color/black"
                 android:background="@drawable/bg_search"
                 android:elevation="4dp"
                 android:fontFamily="@font/poppins_regular"
@@ -33,6 +32,7 @@
                 android:paddingStart="-5dp"
                 android:paddingEnd="50dp"
                 android:singleLine="true"
+                android:textColor="@color/black"
                 android:textColorHint="@color/black_text"
                 android:textSize="16sp"
                 app:closeIcon="@drawable/ic_close"
@@ -63,4 +63,17 @@
 
     </FrameLayout>
 
-</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_post"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_comment_section"
+        android:overScrollMode="never"
+        android:scrollbarSize="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_search_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
